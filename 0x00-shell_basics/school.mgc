@@ -1,2 +1,2 @@
-#!/bin/bash
-0 long 0xSCHOOL thisisaschoolfile
+0 string SCHOOL thisisaschoolfile
+!:mime School data
