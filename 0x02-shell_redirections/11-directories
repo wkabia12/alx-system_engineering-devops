@@ -1,2 +1,2 @@
 #!/bin/bash
-tree -a ./ |wc -l
+ls -d */ | wc -l
