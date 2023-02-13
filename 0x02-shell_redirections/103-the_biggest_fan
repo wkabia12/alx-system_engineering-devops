@@ -1,2 +1,2 @@
 #!/bin/bash
-sort -k 5
+sort -k 5 | head -11
