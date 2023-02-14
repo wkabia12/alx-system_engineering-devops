@@ -1,2 +1,2 @@
 #!/bin/bash
-$PATH |cut -d : |cut -d / |uniq -u |wc -l
+echo $PATH | tr ':' '\n' | cut -d '/' -f 2 | sort -u | wc -l
