@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | tr " " "\n"
+for i in {a..z}{a..z}; do ["$i" != "oo"] && printf "%s\n" "$i"
