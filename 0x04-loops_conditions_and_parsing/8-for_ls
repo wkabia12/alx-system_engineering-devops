@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#prints part of nam after dash
+LIST="$(ls)"
+for i in $LIST; do
+	echo "$i" | cut -d "-" -f 2
+done
