@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script that displays vistors IP along with HTT status code
+awk '{print $1,$9}' "apache-access.log"
