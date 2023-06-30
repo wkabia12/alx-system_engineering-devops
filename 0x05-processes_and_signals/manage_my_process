@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#creates process to be managed by 101
+while true; do
+	echo "I am alive!" >> /tmp/my_process
+	sleep 2
+done

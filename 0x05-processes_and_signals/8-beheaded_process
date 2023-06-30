@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#creates process to be managed by 101
+pkill -9 -f "bash ./7-highlander"

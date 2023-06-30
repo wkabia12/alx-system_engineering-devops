@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#script that displays own pid
+# shellcheck disable=SC2009
+ps -H -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,bsdstart,time,command | grep bash
