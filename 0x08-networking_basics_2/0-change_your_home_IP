@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#shows  resolves localhost and facebook to 127.0.0.2 and 8.8.8.8 resp
+echo "127.0.02 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
