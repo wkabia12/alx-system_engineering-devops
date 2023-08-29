@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#run apache and make it return "Hello Holborton" when quering root of it
+service apache2 start
+echo "Hello Holberton" > /var/www/html/index.html
