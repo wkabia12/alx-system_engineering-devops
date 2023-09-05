@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#creates a link between both default files
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
