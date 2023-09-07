@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 # install haproxy as load balancer for two servers
-apt-get -y update
-add-apt-repository -y ppa:vbernat/haproxy-2.4
-apt-get -y install haproxy=2.4.*
+sudo apt-get -y update
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.4
+sudoapt-get -y install haproxy
 echo -e "\nlisten www
     bind :80
     balance roundrobin
     server 263400-web-01 34.239.248.56 check
     server 263400-web-02 100.26.215.169 check" >> /etc/haproxy/haproxy.cfg
-sudo service haproxy restart
+
+echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
+
+if systemctl is-active --quiet haproxy; then
+    sudo systemctl restart haproxy
+else
+    sudo systemctl start haproxy
+fi
 
