@@ -7,10 +7,9 @@ sudoapt-get -y install haproxy
 echo -e "\nlisten www
     bind :80
     balance roundrobin
-    server 263400-web-01 34.239.248.56 check
-    server 263400-web-02 54.160.127.206 check" >> /etc/haproxy/haproxy.cfg
+    server 263400-web-01 34.239.248.56:80 check
+    server 263400-web-02 54.89.109.5:80 check" >> /etc/haproxy/haproxy.cfg
 
-echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
 
 if systemctl is-active --quiet haproxy; then
     sudo systemctl restart haproxy
